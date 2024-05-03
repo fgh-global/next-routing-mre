@@ -22,12 +22,24 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <nav>
+          These routes are ommitted from generateStaticParams. They all have
+          data in the "mock CMS" which is just a file in the src directory.
+          Running this locally, all these routes render.
+          <br />
           <ul>
             {pageSlugs.map((slug) => (
               <li key={`${pages[slug].title}-link`}>
-                <Link href={slug}>{pages[slug].title}</Link>
+                <Link href={slug[0] === "/" ? slug : `/${slug}`}>
+                  {pages[slug].title}
+                </Link>
               </li>
             ))}
+          </ul>
+          For good measure, here's a route that should 404:
+          <ul>
+            <li key={`404-link`}>
+              <Link href="/this-goes-nowhere">This Goes Nowhere</Link>
+            </li>
           </ul>
         </nav>
         {children}
