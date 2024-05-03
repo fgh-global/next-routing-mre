@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <nav>
           These routes are ommitted from generateStaticParams. They all have
-          data in the "mock CMS" which is just a file in the src directory.
+          data in the &quot;mock CMS&quot; which is just a file in the src directory.
           Running this locally, all these routes render.
           <br />
           <ul>
@@ -35,7 +35,7 @@ export default function RootLayout({
               </li>
             ))}
           </ul>
-          For good measure, here's a route that should 404:
+          For good measure, here&apos;s a route that should 404:
           <ul>
             <li key={`404-link`}>
               <Link href="/this-goes-nowhere">This Goes Nowhere</Link>
