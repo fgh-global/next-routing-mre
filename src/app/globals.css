@@ -100,8 +100,20 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #b2dbb3;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
