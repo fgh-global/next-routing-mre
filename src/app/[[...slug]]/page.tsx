@@ -9,7 +9,8 @@ export type PageProps = {
 
 // Force cache-on-demand!
 export function generateStaticParams() {
-  return ["", "about", "our-story"].map((str) => ({ slug: [str] }));
+  return [];
+  // return ["", "about", "our-story"].map((str) => ({ slug: [str] }));
 }
 
 export default function Page({ params }: PageProps) {
